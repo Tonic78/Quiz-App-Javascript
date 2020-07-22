@@ -50,7 +50,7 @@ startQuiz = () => {
 
 getNewQuestion = () => {
   if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
-    //we could have for example 100 questions but allow the user only to answer 10
+    localStorage.setItem("mostRecentScore", score);
     return window.location.assign("/end.html");
   }
   questionCounter++;
