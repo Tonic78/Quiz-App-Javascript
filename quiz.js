@@ -3,6 +3,8 @@ const choices = Array.from(document.getElementsByClassName("choice-text"));
 const progressText = document.getElementById("progressText");
 const progressBarFull = document.getElementById("progressBarFull");
 const scoreText = document.getElementById("score");
+const loader = document.getElementById("loader");
+const quiz = document.getElementById("quiz");
 
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -18,6 +20,7 @@ fetch("questions.json")
   })
   .then((loadedQuestions) => {
     questions = loadedQuestions;
+
     startQuiz();
   });
 
@@ -29,6 +32,8 @@ startQuiz = () => {
   score = 0;
   availableQuestions = [...questions];
   getNewQuestion();
+  quiz.classList.remove("hidden");
+  loader.classList.add("hidden");
 };
 
 getNewQuestion = () => {
