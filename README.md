@@ -11,7 +11,7 @@ This is part of a freelance project for a company which develops e-learning plat
 
 ## Demo
 
-[demo](https://quiz-app-javascript-demo.netlify.app/)
+Click here to see a [demo](https://quiz-app-javascript-demo.netlify.app/) and take the quiz yourself
 
 ## Technology used
 
